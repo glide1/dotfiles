@@ -1,10 +1,11 @@
 #!/bin/sh
 
+source_dir=''
+get_source_directory source_dir "$0"
+echo $source_dir
+
 source utilities.bash
 
-source_dir=''
-get_source_directory source_dir "${BASH_SOURCE[0]}"
-echo $source_dir
 
 pushd $source_dir
 pushd powerline_fonts

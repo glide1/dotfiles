@@ -1,7 +1,7 @@
 
 source "${HOME}/dotfiles/zgen/zgen.zsh"
 
-source ".zshenv"
+source "${HOME}/.zshenv"
 
 # check if there's no init script
 if ! zgen saved; then
@@ -29,3 +29,5 @@ EOPLUGINS
     # save all to init script
     zgen save
 fi
+
+export RUST_SRC_PATH="${HOME}/sources/rust/src"
