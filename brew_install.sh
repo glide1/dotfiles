@@ -15,12 +15,14 @@ export PATH="~/homebrew/bin:$PATH"
 brew install wget cmake watch gnu-sed coreutils psutils tmux tmux-mem-cpu-load git zsh mc wget vim
 brew install emacs --with-gnutls --with-imagemagick --with-mailutils --with-librsvg --with-glib
 brew install stow
+brew install ttyrec
+brew install the_silver_searcher
 
+brew install lastpass-cli --with-pinentry --with-doc
 
-brew tap railwaycat/emacsmacport
-brew cask install emacs-mac
 brew cask install alfred --appdir=/Applications
 brew cask install colloquy slack --appdir=/Applications
+brew cask install flux --appdir=/Applications
 brew cask install dockertoolbox
 #otto gives vagrant... wow hashicorp.
 #brew cask install otto
