@@ -11,8 +11,11 @@ if ! zgen saved; then
 
     # plugins
     zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/gitignore
+    zgen oh-my-zsh plugins/osx
     zgen oh-my-zsh plugins/sudo
     zgen load zsh-users/zsh-syntax-highlighting
+    zgen load Tarrasch/zsh-autoenv
 
     # bulk load
     zgen loadall <<EOPLUGINS

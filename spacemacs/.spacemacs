@@ -239,7 +239,6 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
-  (global-git-commit-mode t)
   (setq-default rust-enable-racer t)
   (setq-default git-magit-status-fullscreen t)
   (setq magit-repository-directories '("~/dotfiles/" "~/sources/" "~/projects"))
@@ -249,6 +248,7 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  (global-git-commit-mode t)
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((emacs-lisp . t)
