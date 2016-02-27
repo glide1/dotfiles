@@ -12,4 +12,5 @@ echo 'stowing zsh'
 ../homebrew/bin/stow zsh
 ../homebrew/bin/stow spacemacs
 ../homebrew/bin/stow tmux
+../homebrew/bin/stow iterm
 popd

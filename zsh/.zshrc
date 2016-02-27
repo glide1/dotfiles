@@ -34,3 +34,4 @@ EOPLUGINS
 fi
 
 export RUST_SRC_PATH="${HOME}/sources/rust/src"
+source ~/.iterm2_shell_integration.zsh

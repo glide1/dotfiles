@@ -27,8 +27,10 @@ values."
      ;; better-defaults
      colors
      emacs-lisp
+     erlang
+     elixir
      git
-     ;; markdown
+     markdown
      org
      (shell :variables
             shell-default-height 30
@@ -43,7 +45,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(rustfmt)
+   dotspacemacs-additional-packages '(rustfmt editorconfig)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
