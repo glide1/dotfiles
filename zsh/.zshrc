@@ -10,10 +10,13 @@ if ! zgen saved; then
     zgen oh-my-zsh
 
     # plugins
+    zgen oh-my-zsh plugins/cargo
     zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/gitignore
+    zgen oh-my-zsh plugins/nvm
     zgen oh-my-zsh plugins/osx
     zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/yarn
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load Tarrasch/zsh-autoenv
 
@@ -33,5 +36,23 @@ EOPLUGINS
     zgen save
 fi
 
+function code {  
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        local argPath="$1"
+        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
+        open -a "Visual Studio Code" "$argPath"
+    fi
+}
+
 export RUST_SRC_PATH="${HOME}/sources/rust/src"
 source ~/.iterm2_shell_integration.zsh
+
+export NVM_DIR="/${HOME}/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+nvm use --delete-prefix v8.5.0
+
+export PATH="$HOME/.cargo/bin:$PATH"
