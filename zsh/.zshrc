@@ -53,6 +53,3 @@ source ~/.iterm2_shell_integration.zsh
 export NVM_DIR="/${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-nvm use --delete-prefix v8.5.0
-
-export PATH="$HOME/.cargo/bin:$PATH"
