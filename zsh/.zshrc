@@ -15,7 +15,7 @@ zplug "Tarrasch/zsh-autoenv"
 
 zplug "zsh-users/zsh-completions"
 
-zplug "themes/agnoster", from:oh-my-zsh
+zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 
 source ~/.iterm2_shell_integration.zsh
 
