@@ -1,55 +1,31 @@
-
-source "${HOME}/dotfiles/zgen/zgen.zsh"
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
 source "${HOME}/.zshenv"
 
-# check if there's no init script
-if ! zgen saved; then
-    echo "Creating a zgen save"
+zstyle ':completion:*' menu select
 
-    zgen oh-my-zsh
+zplug "plugins/cargo", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/gitignore", from:oh-my-zsh
+zplug "plugins/osx", from:oh-my-zsh
+zplug "plugins/yarn", from:oh-my-zsh
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "Tarrasch/zsh-autoenv"
 
-    # plugins
-    zgen oh-my-zsh plugins/cargo
-    zgen oh-my-zsh plugins/git
-    zgen oh-my-zsh plugins/gitignore
-    zgen oh-my-zsh plugins/nvm
-    zgen oh-my-zsh plugins/osx
-    zgen oh-my-zsh plugins/sudo
-    zgen oh-my-zsh plugins/yarn
-    zgen load zsh-users/zsh-syntax-highlighting
-    zgen load Tarrasch/zsh-autoenv
+zplug "zsh-users/zsh-completions"
 
-    # bulk load
-    zgen loadall <<EOPLUGINS
-        zsh-users/zsh-history-substring-search
-EOPLUGINS
-    # ^ can't indent this EOPLUGINS
+zplug "themes/agnoster", from:oh-my-zsh
 
-    # completions
-    zgen load zsh-users/zsh-completions src
-
-    # theme
-    zgen oh-my-zsh themes/agnoster
-
-    # save all to init script
-    zgen save
-fi
-
-function code {  
-    if [[ $# = 0 ]]
-    then
-        open -a "Visual Studio Code"
-    else
-        local argPath="$1"
-        [[ $1 = /* ]] && argPath="$1" || argPath="$PWD/${1#./}"
-        open -a "Visual Studio Code" "$argPath"
-    fi
-}
-
-export RUST_SRC_PATH="${HOME}/sources/rust/src"
 source ~/.iterm2_shell_integration.zsh
 
-export NVM_DIR="/${HOME}/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
 
+# Then, source plugins and add commands to $PATH
+zplug load

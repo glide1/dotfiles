@@ -9,8 +9,7 @@ echo $source_dir
 
 pushd $source_dir
 echo 'stowing zsh'
-../homebrew/bin/stow zsh
-../homebrew/bin/stow spacemacs
-../homebrew/bin/stow tmux
-../homebrew/bin/stow iterm
+stow zsh
+stow tmux
+stow iterm
 popd
