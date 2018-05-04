@@ -6,3 +6,4 @@ brew install ripgrep
 brew install zplug
 
 brew install lastpass-cli --with-pinentry --with-doc
+brew install nodenv
