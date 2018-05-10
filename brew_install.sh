@@ -7,3 +7,6 @@ brew install zplug
 
 brew install lastpass-cli --with-pinentry --with-doc
 brew install nodenv
+brew install fzf
+brew install htop
+brew install diff-so-fancy

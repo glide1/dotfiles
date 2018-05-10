@@ -12,4 +12,5 @@ echo 'stowing zsh'
 stow zsh
 stow tmux
 stow iterm
+stow git
 popd
