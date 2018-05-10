@@ -17,8 +17,11 @@ zplug "stedolan/jq", \
     rename-to:jq
 
 zplug "changyuheng/zsh-interactive-cd", as:plugin
+zplug "jreese/zsh-titles", as:plugin
 
 zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
+
+fpath+=~/.zfunc
 
 source ~/.iterm2_shell_integration.zsh
 
