@@ -10,3 +10,6 @@ brew install nodenv
 brew install fzf
 brew install htop
 brew install diff-so-fancy
+
+# for asdf
+brew install coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc

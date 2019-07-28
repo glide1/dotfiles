@@ -13,4 +13,8 @@ stow zsh
 stow tmux
 stow iterm
 stow git
+
 popd
+
+
+ln -sf `dirname $0`/asdf $HOME/.asdf
