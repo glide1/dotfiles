@@ -19,6 +19,9 @@ zplug "stedolan/jq", \
 zplug "changyuheng/zsh-interactive-cd", as:plugin
 zplug "jreese/zsh-titles", as:plugin
 
+zplug "plugins/z",   from:oh-my-zsh
+zplug "andrewferrier/fzf-z", as:plugin
+
 zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 
 fpath+=~/.zfunc
