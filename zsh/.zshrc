@@ -96,7 +96,8 @@ if zplug check zsh-users/zsh-history-substring-search; then
     bindkey '^[[B' history-substring-search-down
 fi
 
-. ~/.asdf/plugins/java/asdf-java-wrapper.zsh
-
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+. ~/.asdf/plugins/java/asdf-java-wrapper.zsh
+
